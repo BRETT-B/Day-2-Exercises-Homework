@@ -5,19 +5,14 @@
 
 			<title>Google-ish</title>
 
+			<link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+
 			<link rel="shortcut icon" href="file:///Users/Brett/Desktop/digitalcrafts/7-16immersive/images/google-title.ico" />
 
 		</head>
 		
 		<style type="text/css" media="screen">
 			
-			* {
-
-				margin: 0;
-				padding: 0;
-
-			}
-			/* Set body text font and size. Landing page logo is not text, but an image */
 			body {
 				
 				font-family: arial,sans-serif;
@@ -25,20 +20,7 @@
 
 			}
 
-			.microphone {
-
-				position: fixed;
-				z-index: 0;
-				top: 390px;
-				left: 625px;
-
-			}
-
-			.microphone:hover {
-
-				cursor: pointer;
-
-			}
+			
 
 			#middlecontainer {
 				
@@ -67,13 +49,31 @@
 				margin: 32px 0 18px;
 				border: solid 1px #d9d9d9;
 				font-size: 16px;
-				z-index: 1;
+				position: relative;
+
+
 
 			}
 
 			input[type="text"]:hover {
 
 				border-color: #a6a6a6;
+
+			}
+
+
+			.microphone {
+
+				position: absolute;
+				top: 350px;
+				left: 625px;
+
+			}
+
+			.microphone:hover {
+
+				cursor: pointer;
+
 
 			}
 
@@ -107,10 +107,44 @@
 
 			}
 
+			nav#header ul{
+
+				overflow: hidden;
+
+			}
+
 			nav#header ul li {
 
 				float: left;
+				margin-right: 10px;
+
+			}
+
+			nav#header ul li.header-item.bell{
+
+				height: 20px;
+				width: 20px;
+				background-image: url('https://ssl.gstatic.com/gb/images/v1_8758f7bb.png');
+				background-position: -51px -114px;
+				background-size: 200%;
+				border-radius: 50%;
 				
+
+			}
+
+			nav#header ul li.header-item.letter {
+
+				height: 30px;
+				width: 30px;
+				background-color: #aaa;
+				border-radius: 50%;
+				color: #fff;
+				text-align: center;
+
+
+			}
+
+			nav#header ul li.header-item.grid {
 
 
 			}
@@ -128,7 +162,8 @@
 
 			}
 
-			nav#header ul li a:hover,
+			nav#header ul.header-text li a:hover,
+			nav#header ul.header-item li a:hover,
 			footer nav ul li a:hover {
 
 				text-decoration: underline;
@@ -190,7 +225,7 @@
 					<li class="header-item header-text">Images</a></li>
 					<li class="header-item grid"></li>
 					<li class="header-item bell"></li>
-					<li class="header-item accountpic"></li>
+					<li class="header-item letter">B</li>
 
 				</ul>
 
